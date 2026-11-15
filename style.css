@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8F5F2;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    justify-content: space-between;
+    background-color: #236B65;
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    height: 80px;
+    width: 70px;
+    object-fit: contain;
+}
+
+.logomarca {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    font-weight: 600;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    color: rgb(84, 84, 245);
+}
+
+main {
+    text-align: justify;
+}
+
+main p {
+    font-size: 18px;
+}
+
+h2, h3 {
+    color: #236B65;
+    margin-bottom: 12px;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("img/img_fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: black;
+    min-height: 380px;
+    margin-bottom: 60px;
+}
+
+.banner-texto {
+    margin: 0 30px;
+    max-width: 810px;
+}
+
+.texto {
+    margin: 0 40px;
+}
+
+.texto p {
+    margin-bottom: 18px;
+}
+
+.secao {
+    margin-bottom: 30px;
+}
+
+.problemas {
+    margin: 40px 140px;
+    font-size: 19px;
+}
+
+.problemas ul {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.problemas span {
+    color: #17635c;
+}
+
+.dados {
+    margin: 80px;
+}
+
+.cards {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.card {
+    border-left: 6px solid #176B87;
+    border-radius: 12px;
+    padding: 25px;    
+    box-shadow: 4px 4px 15px rgba(23, 107, 173, 0.35);
+}
+
+#conteudo {
+    padding: 50px 90px;
+}
+
+#conteudo h1 {
+    color: #236B65;
+    margin-bottom: 20px;
+}
+
+.resumo {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.economia {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.econ-card {
+    border-radius: 12px;
+    padding: 20px 150px;
+    background-color: rgb(194, 247, 194);
+}
+
+.painel {
+    border: 1px solid rgba(0, 0, 0, 0.466);
+    border-radius: 10px;
+}
+
+#form-registro {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #236B65;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    padding: 15px;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    mix-blend-mode: multiply;
+    width: 25px;
+    height: 25px;
+}
+
+.img-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

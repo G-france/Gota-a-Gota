@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/Gota d’água.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logomarca">        
+        <img src="img/Gota d’água.png" alt="Imagem de uma gota de chuva" class="logo">
+        <h1>Gota a Gota</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <h1>Registro de ações</h1>
+        <p>Anote o que você fez para evitar desperdício e acompanhe o total economizado. Seu registro ficará compartilhado no site para visualização.</p>
+
+        <section class="resumo">
+            <h2>Resumo das economias</h2>
+            <div class="economia">
+                <div class="econ-card">
+                    <span>Água</span>
+                    <p>0 litros</p>
+                </div>
+
+                <div class="econ-card">
+                    <span>Energia</span>
+                    <p>0 kWh</p>
+                </div>
+
+                <div class="econ-card">
+                    <span>Alimentos</span>
+                    <p>0 kg</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel">
+            <h2 id="titulo-form">Nova ação</h2>
+            <form id="form-registro" novalidate>
+            <div class="campo">
+                <label for="tipo">Recurso <span class="obrig" aria-hidden="true">*</span></label>
+                <select id="tipo" name="tipo" required aria-describedby="erro-tipo">
+                <option value="">Selecione…</option>
+                <option value="agua">Água</option>
+                <option value="energia">Energia</option>
+                <option value="alimentos">Alimentos</option>
+                </select>
+                <p class="erro" id="erro-tipo"></p>
+            </div>
+
+            <div class="campo">
+                <label for="local">Onde aconteceu <span class="obrig" aria-hidden="true">*</span></label>
+                <select id="local" name="local" required aria-describedby="erro-local">
+                <option value="">Selecione…</option>
+                <option value="casa">Casa</option>
+                <option value="comunidade">Comunidade</option>
+                <option value="negocio">Pequeno negócio</option>
+                </select>
+                <p class="erro"></p>
+            </div>
+
+            <div class="campo">
+                <label for="descricao">O que foi feito <span class="obrig">*</span></label>
+                <input type="text" id="descricao" name="descricao" required placeholder="Ex.: Consertei a torneira da cozinha">
+            </div>
+
+            <div class="campo">
+                <label for="quantidade">Desperdício evitado (estimativa em unidades) <span class="obrig">*</span></label>
+                <input type="number" id="quantidade" name="quantidade" required>
+            </div>
+
+            <div class="campo">
+                <label for="data">Data da ação <span class="obrig">*</span></label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <p class="dica"><span class="obrig">*</span> Campos obrigatórios.</p>                <button type="submit" class="botao botao-primario">Adicionar ação</button>
+            </form>
+        </section>
+
+        <section class="painel">
+            <h2 id="titulo-lista">Ações registradas</h2>
+            <p class="dica">Nenhuma ação registrada ainda.</p>
+        </section>
+
+        <section class="painel">
+            <h2 id="titulo-log">Registro de atividades</h2>
+            <p class="dica">Nenhuma atividade ainda.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Gota a Gota 2026 - Todos os direitos reservados.</p>
+        <div class="img-footer">
+            <a href="#"><img src="img/email.png" alt="Logo de email"></a>
+            <a href="#"><img src="img/tel.png" alt="Logo de telefone"></a>
+            <a href="#"><img src="img/insta.png" alt="Logo do instagram"></a>
+            <a href="#"><img src="img/facebook.png" alt="Logo do facebook"></a>
+        </div>
+        <a href="#">Voltar ao topo</a>
+    </footer>
+
+</body>
+</html>
