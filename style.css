@@ -279,3 +279,182 @@ footer img {
     justify-content: center;
     gap: 20px;
 }
+
+/*Responsividade*/
+/* TABLET (até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    .banner {
+        padding: 50px 20px;
+        min-height: 320px;
+        margin-bottom: 40px;
+    }
+
+    .banner-texto {
+        margin: 0 10px;
+    }
+
+    .texto {
+        margin: 0 24px;
+    }
+
+    .problemas {
+        margin: 30px 40px;
+        font-size: 18px;
+    }
+
+    .problemas ul {
+        gap: 28px;
+    }
+
+    .dados {
+        margin: 40px;
+    }
+
+    #conteudo {
+        padding: 40px;
+    }
+
+    .econ-card {
+        padding: 20px 50px;
+    }
+}
+
+/* CELULAR (até 767px) */
+@media (max-width: 767px) {
+    img {
+        max-width: 100%;
+    }
+
+    /* Cabeçalho e menu */
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .logo {
+        height: 60px;
+        width: 55px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    /* Textos */
+    main {
+        text-align: left; /* justificado fica ruim em tela estreita */
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    #conteudo h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Espaçamentos */
+    .banner {
+        padding: 35px 16px;
+        min-height: auto;
+        margin-bottom: 30px;
+    }
+
+    .banner-texto {
+        margin: 0;
+    }
+
+    .texto {
+        margin: 0 16px;
+    }
+
+    .problemas {
+        margin: 24px 20px;
+        font-size: 16px;
+    }
+
+    .problemas ul {
+        gap: 20px;
+    }
+
+    .dados {
+        margin: 24px 16px;
+    }
+
+    #conteudo {
+        padding: 24px 16px;
+    }
+
+    .resumo {
+        margin: 24px 0;
+    }
+
+    /* Cards de economia: um embaixo do outro */
+    .economia {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .econ-card {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    /* Formulário */
+    .painel {
+        padding: 12px;
+    }
+
+    .campo label {
+        font-size: 16px;
+    }
+
+    .campo input,
+    select {
+        font-size: 16px; /* evita zoom automático no iPhone */
+        width: 100%;
+    }
+
+    .botao-primario,
+    .botao-secundario {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .lista-registros li,
+    #lista-log li {
+        word-break: break-word;
+    }
+
+    .botao-editar,
+    .botao-remover {
+        margin: 8px 8px 0 0;
+    }
+
+    /* Rodapé */
+    footer {
+        font-size: 14px;
+    }
+}

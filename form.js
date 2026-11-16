@@ -2,8 +2,8 @@
 // Economia estimada CADA VEZ que a pessoa registra uma ação.
 // Para mudar um valor, é só alterar o número aqui.
 const VALOR_POR_ACAO = {
-  agua: 50,        // litros
-  energia: 0.3,    // kWh
+  agua: 10,        // litros
+  energia: 0.5,    // kWh
   alimentos: 0.3   // kg
 };
 
