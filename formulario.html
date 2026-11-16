@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
     <link rel="icon" href="img/Gota d’água.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,21 +27,22 @@
         <p>Anote o que você fez para evitar desperdício e acompanhe o total economizado. Seu registro ficará compartilhado no site para visualização.</p>
 
         <section class="resumo">
-            <h2>Resumo das economias</h2>
+            <h2>Estimativa das economias</h2>
+            <p>Cada vez que você registra uma ação, o site considera uma economia média estimada: 15 litros de água, 0,3 kWh de energia ou 0,3 kg de alimentos. São valores aproximados, apenas para dar uma noção do impacto.</p><br>
             <div class="economia">
                 <div class="econ-card">
                     <span>Água</span>
-                    <p>0 litros</p>
+                    <p id="total-agua">0 litros</p>
                 </div>
 
                 <div class="econ-card">
                     <span>Energia</span>
-                    <p>0 kWh</p>
+                    <p id="total-energia">0 kWh</p>    
                 </div>
 
                 <div class="econ-card">
                     <span>Alimentos</span>
-                    <p>0 kg</p>
+                    <p id="total-alimentos">0 kg</p>
                 </div>
             </div>
         </section>
@@ -50,54 +51,62 @@
             <h2 id="titulo-form">Nova ação</h2>
             <form id="form-registro" novalidate>
             <div class="campo">
-                <label for="tipo">Recurso <span class="obrig" aria-hidden="true">*</span></label>
-                <select id="tipo" name="tipo" required aria-describedby="erro-tipo">
+                <label for="tipo">Recurso <span class="obrig">*</span></label>
+                <select id="tipo" name="tipo" required>
                 <option value="">Selecione…</option>
                 <option value="agua">Água</option>
                 <option value="energia">Energia</option>
                 <option value="alimentos">Alimentos</option>
                 </select>
-                <p class="erro" id="erro-tipo"></p>
+                <p class="erro" id="erro-tipo" role="alert"></p>
             </div>
 
             <div class="campo">
-                <label for="local">Onde aconteceu <span class="obrig" aria-hidden="true">*</span></label>
-                <select id="local" name="local" required aria-describedby="erro-local">
+                <label for="local">Onde aconteceu <span class="obrig">*</span></label>
+                <select id="local" name="local" required>
                 <option value="">Selecione…</option>
                 <option value="casa">Casa</option>
                 <option value="comunidade">Comunidade</option>
                 <option value="negocio">Pequeno negócio</option>
                 </select>
-                <p class="erro"></p>
+                <p class="erro" id="erro-local" role="alert"></p>
             </div>
 
             <div class="campo">
                 <label for="descricao">O que foi feito <span class="obrig">*</span></label>
-                <input type="text" id="descricao" name="descricao" required placeholder="Ex.: Consertei a torneira da cozinha">
+                <input type="text" id="descricao" name="descricao" required maxlength="100" placeholder="Ex.: Consertei a torneira da cozinha">
+                <p class="erro" id="erro-descricao" role="alert"></p>
             </div>
 
             <div class="campo">
-                <label for="quantidade">Desperdício evitado (estimativa em unidades) <span class="obrig">*</span></label>
-                <input type="number" id="quantidade" name="quantidade" required>
+                <label for="vezes">Quantas vezes você fez isso? <span class="obrig">*</span></label>
+                <input type="number" id="vezes" name="vezes" required min="1" step="1" placeholder="Ex.: 3">
+                <p class="erro" id="erro-vezes" role="alert"></p>
+                <p class="previa" id="previa" aria-live="polite"></p>
             </div>
 
             <div class="campo">
                 <label for="data">Data da ação <span class="obrig">*</span></label>
                 <input type="date" id="data" name="data" required>
+                <p class="erro" id="erro-data" role="alert"></p>
             </div>
 
-            <p class="dica"><span class="obrig">*</span> Campos obrigatórios.</p>                <button type="submit" class="botao botao-primario">Adicionar ação</button>
+            <p class="texto-obrig"><span class="obrig">*</span>Campos obrigatórios.</p>                
+            <button type="submit" id="btn-salvar" class="botao-primario">Adicionar ação</button>
+            <button type="button" id="btn-cancelar" class="botao-secundario" hidden>Cancelar edição</button>
             </form>
         </section>
 
         <section class="painel">
             <h2 id="titulo-lista">Ações registradas</h2>
-            <p class="dica">Nenhuma ação registrada ainda.</p>
+            <p class="dica" id="aviso-acoes">Nenhuma ação registrada ainda.</p>
+            <ul id="lista-acoes" class="lista-registros"></ul>
         </section>
 
         <section class="painel">
             <h2 id="titulo-log">Registro de atividades</h2>
-            <p class="dica">Nenhuma atividade ainda.</p>
+            <p class="dica" id="aviso-log">Nenhuma atividade ainda.</p>
+            <ul id="lista-log" class="lista-registros"></ul>
         </section>
     </main>
 
@@ -112,5 +121,6 @@
         <a href="#">Voltar ao topo</a>
     </footer>
 
+    <script src="form.js"></script>
 </body>
 </html>
