@@ -233,6 +233,7 @@ h2, h3 {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    color: white;
 }
 
 .botao-remover {
@@ -243,6 +244,7 @@ h2, h3 {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    color: white;
 }
 
 footer {

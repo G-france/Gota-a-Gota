@@ -4,53 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="icon" href="img/Gota d’água.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Gota d’água.png"> <!--Icone de Gota d'água na guia-->
+    <link rel="stylesheet" href="style.css"> <!--Arquivo CSS-->
 </head>
 <body>
-    <header>
-        <div class="logomarca">        
+    <header> <!--Cabeçalho da página-->
+        <div class="logomarca"> <!--Seção para logo e título juntos-->  
         <img src="img/Gota d’água.png" alt="Imagem de uma gota de chuva" class="logo">
         <h1>Gota a Gota</h1>
         </div>
-        <nav>
+        <nav> <!--Navegação da página-->
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="index.html">Inicio</a></li> <!--Redirecionamento para primeira página do site-->
+                <li><a href="dados.html">Dados</a></li> <!--Redirecionamento para segunda página do site contendo dados de pesquisa-->
+                <li><a href="formulario.html">Formulário</a></li> <!--Página atual-->
             </ul>
         </nav>
     </header>
 
-    <main id="conteudo">
+    <main id="conteudo"> <!--Conteúdo principal da página-->
         <h1>Registro de ações</h1>
         <p>Anote o que você fez para evitar desperdício e acompanhe o total economizado. Seu registro ficará compartilhado no site para visualização.</p>
+        <!--O texto dizendo que o registro ficará compartilhado para outras pessoas não é verdadeiro, é somente uma talvez intenção futura que irei implementar-->
 
-        <section class="resumo">
+        <section class="resumo"> <!--Seção de resumo guardando informações que o usuário preecher no formulário-->
             <h2>Estimativa das economias</h2>
             <p>Cada vez que você registra uma ação, o site considera uma economia média estimada: 15 litros de água, 0,3 kWh de energia ou 0,3 kg de alimentos. São valores aproximados, apenas para dar uma noção do impacto.</p><br>
-            <div class="economia">
-                <div class="econ-card">
+            <div class="economia"> <!--Seção geral de cards-->
+                <div class="econ-card"> <!--Seção indidual de card-->
                     <span>Água</span>
-                    <p id="total-agua">0 litros</p>
+                    <p id="total-agua">0 litros</p> <!--Dados que mudarão conforme dados do formulário-->
                 </div>
 
-                <div class="econ-card">
+                <div class="econ-card"> <!--Seção indidual de card-->
                     <span>Energia</span>
-                    <p id="total-energia">0 kWh</p>    
+                    <p id="total-energia">0 kWh</p> <!--Dados que mudarão conforme dados do formulário-->
                 </div>
 
-                <div class="econ-card">
+                <div class="econ-card"> <!--Seção indidual de card-->
                     <span>Alimentos</span>
-                    <p id="total-alimentos">0 kg</p>
+                    <p id="total-alimentos">0 kg</p> <!--Dados que mudarão conforme dados do formulário-->
                 </div>
             </div>
         </section>
 
-        <section class="painel">
+        <section class="painel"> <!--Seção do formulário / Campo para borda em volta-->
             <h2 id="titulo-form">Nova ação</h2>
-            <form id="form-registro" novalidate>
-            <div class="campo">
+            <form id="form-registro" novalidate> <!--Formulário (Novalidate serve para dados do navegador não preencher automaticamente os campos do formulário)-->
+            <div class="campo"> <!--Seção individual do campo de preenchimento do formulário-->
                 <label for="tipo">Recurso <span class="obrig">*</span></label>
                 <select id="tipo" name="tipo" required>
                 <option value="">Selecione…</option>
@@ -58,10 +59,10 @@
                 <option value="energia">Energia</option>
                 <option value="alimentos">Alimentos</option>
                 </select>
-                <p class="erro" id="erro-tipo" role="alert"></p>
+                <p class="erro" id="erro-tipo" role="alert"></p> <!--Mensagem de erro caso não seja preenchido o campo-->
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual do campo de preenchimento do formulário-->
                 <label for="local">Onde aconteceu <span class="obrig">*</span></label>
                 <select id="local" name="local" required>
                 <option value="">Selecione…</option>
@@ -69,58 +70,58 @@
                 <option value="comunidade">Comunidade</option>
                 <option value="negocio">Pequeno negócio</option>
                 </select>
-                <p class="erro" id="erro-local" role="alert"></p>
+                <p class="erro" id="erro-local" role="alert"></p> <!--Mensagem de erro caso não seja preenchido o campo-->
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual do campo de preenchimento do formulário-->
                 <label for="descricao">O que foi feito <span class="obrig">*</span></label>
                 <input type="text" id="descricao" name="descricao" required maxlength="100" placeholder="Ex.: Consertei a torneira da cozinha">
-                <p class="erro" id="erro-descricao" role="alert"></p>
+                <p class="erro" id="erro-descricao" role="alert"></p> <!--Mensagem de erro caso não seja preenchido o campo-->
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual do campo de preenchimento do formulário-->
                 <label for="vezes">Quantas vezes você fez isso? <span class="obrig">*</span></label>
                 <input type="number" id="vezes" name="vezes" required min="1" step="1" placeholder="Ex.: 3">
-                <p class="erro" id="erro-vezes" role="alert"></p>
-                <p class="previa" id="previa" aria-live="polite"></p>
+                <p class="erro" id="erro-vezes" role="alert"></p> <!--Mensagem de erro caso não seja preenchido o campo-->
+                <p class="previa" id="previa" aria-live="polite"></p> <!--Mensagem de estimativa de recurso economizado dependendo do valor colocado-->
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual do campo de preenchimento do formulário-->
                 <label for="data">Data da ação <span class="obrig">*</span></label>
                 <input type="date" id="data" name="data" required>
-                <p class="erro" id="erro-data" role="alert"></p>
+                <p class="erro" id="erro-data" role="alert"></p> <!--Mensagem de erro caso não seja preenchido o campo-->
             </div>
 
             <p class="texto-obrig"><span class="obrig">*</span>Campos obrigatórios.</p>                
-            <button type="submit" id="btn-salvar" class="botao-primario">Adicionar ação</button>
-            <button type="button" id="btn-cancelar" class="botao-secundario" hidden>Cancelar edição</button>
+            <button type="submit" id="btn-salvar" class="botao-primario">Adicionar ação</button> <!--Botão de adicionar a ação preenchida no formulário-->
+            <button type="button" id="btn-cancelar" class="botao-secundario" hidden>Cancelar edição</button> <!--Botão de cancelar edição (aparece somente se clicar no botão de edição em uma ação já registrada)-->
             </form>
         </section>
 
-        <section class="painel">
+        <section class="painel"> <!--Seção para campo com borda em volta-->
             <h2 id="titulo-lista">Ações registradas</h2>
-            <p class="dica" id="aviso-acoes">Nenhuma ação registrada ainda.</p>
-            <ul id="lista-acoes" class="lista-registros"></ul>
+            <p class="dica" id="aviso-acoes">Nenhuma ação registrada ainda.</p> <!--Essa mensagem só aparece caso não tenha nenhum registro de ação-->
+            <ul id="lista-acoes" class="lista-registros"></ul> <!--Lista de ações que serão registradas para edição-->
         </section>
 
-        <section class="painel">
+        <section class="painel"> <!--Seção para campo com borda em volta-->
             <h2 id="titulo-log">Registro de atividades</h2>
-            <p class="dica" id="aviso-log">Nenhuma atividade ainda.</p>
-            <ul id="lista-log" class="lista-registros"></ul>
+            <p class="dica" id="aviso-log">Nenhuma atividade ainda.</p> <!--Essa mensagem só aparece caso não tenha nenhum registro de ação-->
+            <ul id="lista-log" class="lista-registros"></ul> <!--Lista de ações registradas, editadas ou excluídas-->
         </section>
     </main>
 
-    <footer>
+    <footer> <!--Rodapé da página-->
         <p>&copy; Gota a Gota 2026 - Todos os direitos reservados.</p>
-        <div class="img-footer">
+        <div class="img-footer"> <!--Seção para linha horizontal da página-->
             <a href="#"><img src="img/email.png" alt="Logo de email"></a>
             <a href="#"><img src="img/tel.png" alt="Logo de telefone"></a>
             <a href="#"><img src="img/insta.png" alt="Logo do instagram"></a>
             <a href="#"><img src="img/facebook.png" alt="Logo do facebook"></a>
         </div>
-        <a href="#">Voltar ao topo</a>
+        <a href="#">Voltar ao topo</a> <!--Redireciona para o topo da imagem-->
     </footer>
 
-    <script src="form.js"></script>
+    <script src="form.js"></script> <!--Arquivo JavaScript externo-->
 </body>
 </html>
