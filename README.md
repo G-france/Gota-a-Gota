@@ -1,6 +1,7 @@
 # Gota a Gota
 > **P2** <
-O site Gota a Gota tem o objetivo de demonstrar o impacto sobre o uso excessivo de recursos no planeta Terra, tentando influenciar a mais pessoas para uso consciente de recursos, redução do desperdício de água, energia e alimentos em casas, comunidades e pequenos negócios.
+
+O site Gota a Gota tem o objetivo de demonstrar o impacto sobre o **uso excessivo de recursos** no planeta Terra, tentando influenciar a mais pessoas para uso consciente de recursos, redução do desperdício de água, energia e alimentos em casas, comunidades e pequenos negócios.
 
 ## Problemas
 O problema central do tema "Uso consciente de recursos" é que o consumo excessivo e o descarte evitável esgotam os recursos naturais, aumentam os custos financeiros e agravam a desigualdade social e ambiental. Mesmo em pequena escala, o acúmulo de hábitos ineficientes gera impactos severos para toda a sociedade. Famílias de baixa renda, moradores de comunidades e pequenos comerciantes que dependem de água, energia e alimentos para suas atividades diárias, são as pessoas que acabam sofrendo com essa causa.
@@ -12,7 +13,7 @@ O problema central do tema "Uso consciente de recursos" é que o consumo excessi
 * **Claude**
 
 ## Execução do site
-link hospedado pelo github pages:
+link hospedado pelo github pages para visualização direta do site:
 https://g-france.github.io/P2---Uso-Consciente-de-Recursos/
 
 ## Projeto estruturado em pastas
@@ -43,4 +44,4 @@ Dentro da pasta **IMG**:
 ![Página_dados](img/Print_página_dados.png)
 
 ### Página formulário
-![Página_formulário](img/Print_página_formulário.png)
+![Página_formulario](img/Print_página_formulário.png)
